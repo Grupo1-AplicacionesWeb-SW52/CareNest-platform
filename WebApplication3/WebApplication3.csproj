@@ -63,8 +63,6 @@
       <Folder Include="Startup\Infrastructure\Persistence\EFC\Repositories\" />
       <Folder Include="Startup\Interfaces\REST\Resources\" />
       <Folder Include="Startup\Interfaces\REST\Transform\" />
-      <Folder Include="user-payment-methods\Interfaces\REST\Resources\" />
-      <Folder Include="user-payment-methods\Interfaces\REST\Transform\" />
       <Folder Include="UserPaymentMethods\Application\CommandServices\" />
       <Folder Include="UserPaymentMethods\Application\QueryServices\" />
       <Folder Include="UserPaymentMethods\Domain\Model\Aggregates\" />
