@@ -4,6 +4,7 @@ using WebApplication3.Caregivers.Domain.Model.Aggregates;
 using WebApplication3.Services.Domain.Model.Aggregates;
 using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using WebApplication3.Tutors.Domain.Model.Aggregates;
+using WebApplication3.user_payment_methods.Domain.Model.Aggregates;
 
 namespace WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration
 {
@@ -113,6 +114,22 @@ namespace WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration
                 entity.Property(e => e.Address).IsRequired().HasMaxLength(250);
                 entity.Property(e => e.District).IsRequired().HasMaxLength(50);
             });
+            
+            // Configuración para UserPaymentMethod
+            builder.Entity<UserPaymentMethod>(entity =>
+            {
+                entity.ToTable("user_payment_methods");
+                entity.HasKey(upm => upm.Id);
+
+                entity.Property(upm => upm.CardNumber).IsRequired().HasMaxLength(16);
+                entity.Property(upm => upm.Cvv).IsRequired().HasMaxLength(3);
+                entity.Property(upm => upm.CardHolder).IsRequired().HasMaxLength(100);
+                entity.Property(upm => upm.ExpirationDate).IsRequired();
+
+                entity.HasOne<Caregiver>().WithMany().HasForeignKey(upm => upm.CaregiverId).OnDelete(DeleteBehavior.Restrict);
+                entity.HasOne<Tutor>().WithMany().HasForeignKey(upm => upm.TutorId).OnDelete(DeleteBehavior.Restrict);
+            });
+            
         }
     }
 }

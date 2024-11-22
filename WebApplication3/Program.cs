@@ -19,6 +19,7 @@ using WebApplication3.Tutors.Infrastructure.Persistence.EFC.Repositories;
 using WebApplication3.user_payment_methods.Application.Internal.CommandServices;
 using WebApplication3.user_payment_methods.Application.Internal.QueryServices;
 using WebApplication3.user_payment_methods.Domain.Repositories;
+using WebApplication3.user_payment_methods.Domain.Services;
 using WebApplication3.user_payment_methods.Infrastructure.Persistence.EFC.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -119,6 +120,10 @@ builder.Services.AddScoped<WorkaroundCommandService>();
 builder.Services.AddScoped<IPaymentMethodRepository, PaymentMethodRepository>();
 builder.Services.AddScoped<PaymentMethodQueryService>();
 builder.Services.AddScoped<PaymentMethodCommandService>();
+builder.Services.AddScoped<IPaymentMethodCommandService, PaymentMethodCommandService>();
+builder.Services.AddScoped<IPaymentMethodQueryService, PaymentMethodQueryService>();
+
+
 
 builder.Services.AddControllers();
 
