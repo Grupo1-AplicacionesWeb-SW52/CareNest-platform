@@ -4,6 +4,7 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>CarNest</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -51,7 +52,6 @@
       <Folder Include="Reservations\Infrastructure\Persistence\EFC\Repositories\" />
       <Folder Include="Reservations\Interfaces\REST\Resources\" />
       <Folder Include="Reservations\Interfaces\REST\Transform\" />
-      <Folder Include="Services\Domain\Model\ValueObjects\" />
       <Folder Include="Startup\Application\CommandServices\" />
       <Folder Include="Startup\Application\QueryServices\" />
       <Folder Include="Startup\Domain\Model\Aggregates\" />

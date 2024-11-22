@@ -52,13 +52,13 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "WebApplication3 API",
+        Title = "CareNestPlatform API",
         Version = "v1",
-        Description = "API for WebApplication3 Project",
+        Description = "API for CareNestPlatform Project",
         Contact = new OpenApiContact
         {
-            Name = "Your Company",
-            Email = "contact@yourcompany.com"
+            Name = "Edu Nest",
+            Email = "contact@edunest.com"
         }
     });
     c.EnableAnnotations();
@@ -97,7 +97,7 @@ builder.Services.AddScoped<CaregiverCommandService>();
 builder.Services.AddScoped<CaregiverQueryService>();
 
 builder.Services.AddScoped<ITutorRepository, TutorRepository>();
-builder.Services.AddScoped<TutorQueryService>();  // Asegúrate de registrar el servicio aquí
+builder.Services.AddScoped<TutorQueryService>();  
 builder.Services.AddScoped<TutorCommandService>();
 
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();

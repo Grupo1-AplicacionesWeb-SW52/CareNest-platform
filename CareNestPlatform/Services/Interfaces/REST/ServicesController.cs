@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using WebApplication3.Services.Domain.Model.Aggregates;
 using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration;
 
+namespace WebApplication3.Services.Interfaces.REST;
+
 [ApiController]
 [Route("api/[controller]")]
 public class ServicesController : ControllerBase
