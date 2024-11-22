@@ -65,7 +65,6 @@
       <Folder Include="Startup\Interfaces\REST\Transform\" />
       <Folder Include="user-payment-methods\Application\CommandServices\" />
       <Folder Include="user-payment-methods\Application\QueryServices\" />
-      <Folder Include="user-payment-methods\Domain\Model\Queries\" />
       <Folder Include="user-payment-methods\Domain\Model\ValueObjects\" />
       <Folder Include="user-payment-methods\Domain\Repositories\" />
       <Folder Include="user-payment-methods\Domain\Services\" />
