@@ -63,17 +63,6 @@
       <Folder Include="Startup\Infrastructure\Persistence\EFC\Repositories\" />
       <Folder Include="Startup\Interfaces\REST\Resources\" />
       <Folder Include="Startup\Interfaces\REST\Transform\" />
-      <Folder Include="UserPaymentMethods\Application\CommandServices\" />
-      <Folder Include="UserPaymentMethods\Application\QueryServices\" />
-      <Folder Include="UserPaymentMethods\Domain\Model\Aggregates\" />
-      <Folder Include="UserPaymentMethods\Domain\Model\Commands\" />
-      <Folder Include="UserPaymentMethods\Domain\Model\Queries\" />
-      <Folder Include="UserPaymentMethods\Domain\Model\ValueObjects\" />
-      <Folder Include="UserPaymentMethods\Domain\Repositories\" />
-      <Folder Include="UserPaymentMethods\Domain\Services\" />
-      <Folder Include="UserPaymentMethods\Infrastructure\Persistence\EFC\Repositories\" />
-      <Folder Include="UserPaymentMethods\Interfaces\REST\Resources\" />
-      <Folder Include="UserPaymentMethods\Interfaces\REST\Transform\" />
     </ItemGroup>
 
     <ItemGroup>
