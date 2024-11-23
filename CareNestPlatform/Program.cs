@@ -16,6 +16,11 @@ using WebApplication3.Tutors.Application.Internal.CommandServices;
 using WebApplication3.Tutors.Application.Internal.QueryServices;
 using WebApplication3.Tutors.Domain.Repositories;
 using WebApplication3.Tutors.Infrastructure.Persistence.EFC.Repositories;
+using WebApplication3.ServiceDetail.Application.Internal.CommandServices;
+using WebApplication3.ServiceDetail.Application.Internal.QueryServices;
+using WebApplication3.ServiceDetail.Domain.Repositories;
+using WebApplication3.ServiceDetail.Infrastructure.Persistence.EFC.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,6 +52,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 // Learn more about configuring Swagger/OpenAPI
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -103,6 +109,10 @@ builder.Services.AddScoped<TutorCommandService>();
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 builder.Services.AddScoped<ServiceQueryService>();
 builder.Services.AddScoped<ServiceCommandService>();
+
+builder.Services.AddScoped<IServiceDetailRepository, ServiceDetailRepository>();
+builder.Services.AddScoped<ServiceDetailQueryService>();
+builder.Services.AddScoped<ServiceDetailCommandService>();
 
 
 builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
