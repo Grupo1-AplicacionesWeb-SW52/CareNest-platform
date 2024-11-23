@@ -16,6 +16,11 @@ using WebApplication3.Tutors.Application.Internal.CommandServices;
 using WebApplication3.Tutors.Application.Internal.QueryServices;
 using WebApplication3.Tutors.Domain.Repositories;
 using WebApplication3.Tutors.Infrastructure.Persistence.EFC.Repositories;
+using WebApplication3.ServiceDetail.Application.Internal.CommandServices;
+using WebApplication3.ServiceDetail.Application.Internal.QueryServices;
+using WebApplication3.ServiceDetail.Domain.Repositories;
+using WebApplication3.ServiceDetail.Infrastructure.Persistence.EFC.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
