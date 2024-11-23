@@ -118,3 +118,14 @@ C:\Users\Nicolas Vera\Desktop\WebApplication3\WebApplication3\bin\Debug\net8.0\M
 C:\Users\Nicolas Vera\Desktop\WebApplication3\WebApplication3\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Nicolas Vera\Desktop\WebApplication3\WebApplication3\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Nicolas Vera\Desktop\WebApplication3\WebApplication3\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Arnold24x24\Documents\Projects JetBrains\CareNest-platform-feat-service-detail\WebApplication3\obj\Debug\net8.0\WebApplication3.csproj.AssemblyReference.cache
+C:\Users\Arnold24x24\Documents\Projects JetBrains\CareNest-platform-feat-service-detail\WebApplication3\obj\Debug\net8.0\WebApplication3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arnold24x24\Documents\Projects JetBrains\CareNest-platform-feat-service-detail\WebApplication3\obj\Debug\net8.0\WebApplication3.AssemblyInfoInputs.cache
+C:\Users\Arnold24x24\Documents\Projects JetBrains\CareNest-platform-feat-service-detail\WebApplication3\obj\Debug\net8.0\WebApplication3.AssemblyInfo.cs
+C:\Users\Arnold24x24\Documents\Projects JetBrains\CareNest-platform-feat-service-detail\WebApplication3\obj\Debug\net8.0\WebApplication3.csproj.CoreCompileInputs.cache
+C:\Users\Arnold24x24\Documents\Projects JetBrains\CareNest-platform-feat-service-detail\WebApplication3\obj\Debug\net8.0\WebApplication3.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Arnold24x24\Documents\Projects JetBrains\CareNest-platform-feat-service-detail\WebApplication3\obj\Debug\net8.0\WebApplication3.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Arnold24x24\Documents\Projects JetBrains\CareNest-platform-feat-service-detail\WebApplication3\obj\Debug\net8.0\WebApplication3.sourcelink.json
+C:\Users\Arnold24x24\Documents\Projects JetBrains\CareNest-platform-feat-service-detail\WebApplication3\obj\Debug\net8.0\WebApplication3.dll
+C:\Users\Arnold24x24\Documents\Projects JetBrains\CareNest-platform-feat-service-detail\WebApplication3\obj\Debug\net8.0\refint\WebApplication3.dll
+C:\Users\Arnold24x24\Documents\Projects JetBrains\CareNest-platform-feat-service-detail\WebApplication3\obj\Debug\net8.0\WebApplication3.pdb
