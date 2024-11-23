@@ -1,6 +1,7 @@
 using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using Microsoft.EntityFrameworkCore;
 using CarNest.Caregivers.Domain.Model.Aggregates;
+using CarNest.Reservations.Domain.Model.Aggregates;  // Alias para 'Reservations'
 using CarNest.Services.Domain.Model.Aggregates;
 using CarNest.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using CarNest.Tutors.Domain.Model.Aggregates;
@@ -13,24 +14,23 @@ namespace CarNest.Shared.Infrastructure.Persistence.EFC.Configuration
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            // Enable Audit Fields Interceptors
+            // Habilitar interceptores de campos de auditoría
             builder.AddCreatedUpdatedInterceptor();
         }
 
         // DbSets - Inicialización para evitar errores de propiedades no inicializadas
         public DbSet<Caregiver> Caregivers { get; set; } = null!;
         public DbSet<Service> Services { get; set; } = null!;
-        public DbSet<Schedule> Schedules { get; set; } = null!;
-        
+        public DbSet<Schedule> Schedules { get; set; } = null!;  // Schedule de Services
         public DbSet<Workaround> Workarounds { get; set; } = null!;
-
         public DbSet<Tutor> Tutors { get; set; } = null!;
+        public DbSet<Reservation> Reservations { get; set; } = null!; // DbSet para reservas
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
-            // Tutor Configuration
+            // Configuración para Caregiver
             builder.Entity<Caregiver>(entity =>
             {
                 entity.ToTable("caregivers");
@@ -42,7 +42,6 @@ namespace CarNest.Shared.Infrastructure.Persistence.EFC.Configuration
                 entity.Property(e => e.Document).IsRequired().HasMaxLength(20);
                 entity.Property(e => e.Password).IsRequired().HasMaxLength(50);
                 entity.Property(e => e.ProfileImg).HasMaxLength(250);
-
                 entity.Property(e => e.Address).IsRequired().HasMaxLength(250);
                 entity.Property(e => e.District).IsRequired().HasMaxLength(50);
             });
@@ -68,7 +67,6 @@ namespace CarNest.Shared.Infrastructure.Persistence.EFC.Configuration
                     .OnDelete(DeleteBehavior.Cascade);
             });
 
-
             // Configuración para Workaround
             builder.Entity<Workaround>(entity =>
             {
@@ -82,7 +80,7 @@ namespace CarNest.Shared.Infrastructure.Persistence.EFC.Configuration
                     .OnDelete(DeleteBehavior.Cascade);
             });
 
-            // Configuración para Schedule
+            // Configuración para Schedule (de Services)
             builder.Entity<Schedule>(entity =>
             {
                 entity.ToTable("schedules");
@@ -96,8 +94,46 @@ namespace CarNest.Shared.Infrastructure.Persistence.EFC.Configuration
                     wh.Property(w => w.EndTime).HasColumnName("end_time").IsRequired().HasMaxLength(5);
                 });
             });
-            
-            // Tutor Configuration
+
+            // Configuración para Reservation
+            builder.Entity<Reservation>(entity =>
+            {
+                entity.ToTable("reservations");
+                entity.HasKey(r => r.Id);
+
+                entity.Property(r => r.CreatedAt).IsRequired();
+                entity.Property(r => r.Status).IsRequired();
+                entity.Property(r => r.TotalFare).HasColumnType("decimal(10,2)").IsRequired();
+
+                // Relación entre Reservation y Schedule
+                entity.OwnsOne(r => r.Schedule, schedule =>
+                {
+                    schedule.Property(s => s.Day).IsRequired().HasMaxLength(10);
+                    schedule.OwnsOne(s => s.WorkHours, wh =>
+                    {
+                        wh.Property(w => w.StartTime).HasColumnName("start_time").IsRequired().HasMaxLength(5);
+                        wh.Property(w => w.EndTime).HasColumnName("end_time").IsRequired().HasMaxLength(5);
+                    });
+                });
+
+                // Relaciones de claves foráneas
+                entity.HasOne(r => r.Tutor)
+                    .WithMany()
+                    .HasForeignKey(r => r.TutorId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(r => r.Caregiver)
+                    .WithMany()
+                    .HasForeignKey(r => r.CaregiverId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(r => r.Service)
+                    .WithMany()
+                    .HasForeignKey(r => r.ServiceId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            // Configuración para Tutor
             builder.Entity<Tutor>(entity =>
             {
                 entity.ToTable("tutors");
@@ -113,9 +149,6 @@ namespace CarNest.Shared.Infrastructure.Persistence.EFC.Configuration
                 entity.Property(e => e.Address).IsRequired().HasMaxLength(250);
                 entity.Property(e => e.District).IsRequired().HasMaxLength(50);
             });
-            
-            // Configuración para Reservation
-            
         }
     }
 }
