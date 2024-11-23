@@ -1,3 +1,13 @@
+using CarNest.CaregiverPaymentMethod.Application.Internal.CommandServices;
+using CarNest.CaregiverPaymentMethod.Application.Internal.QueryServices;
+using CarNest.CaregiverPaymentMethod.Domain.Repositories;
+using CarNest.CaregiverPaymentMethod.Domain.Services;
+using CarNest.CaregiverPaymentMethod.Infrastructure.Persistence.EFC.Repositories;
+using CarNest.TutorPaymentMethod.Application.Internal.CommandServices;
+using CarNest.TutorPaymentMethod.Application.Internal.QueryServices;
+using CarNest.TutorPaymentMethod.Domain.Repositories;
+using CarNest.TutorPaymentMethod.Domain.Services;
+using CarNest.TutorPaymentMethod.Infrastructure.Persistence.EFC.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using WebApplication3.Shared.Domain.Repositories;
@@ -112,7 +122,20 @@ builder.Services.AddScoped<ScheduleCommandService>();
 builder.Services.AddScoped<IWorkaroundRepository, WorkaroundRepository>();
 builder.Services.AddScoped<WorkaroundCommandService>();
 
+// Register Tutor Payment Methods Repositories and Services
+builder.Services.AddScoped<ITutorPaymentMethodRepository, TutorPaymentMethodRepository>();
+builder.Services.AddScoped<TutorPaymentMethodQueryService>();
+builder.Services.AddScoped<TutorPaymentMethodCommandService>();
+builder.Services.AddScoped<ITutorPaymentMethodCommandService, TutorPaymentMethodCommandService>();
+builder.Services.AddScoped<ITutorPaymentMethodQueryService, TutorPaymentMethodQueryService>();
 
+
+// Register Caregiver Repositories and Services
+builder.Services.AddScoped<ICaregiverPaymentMethodRepository, CaregiverPaymentMethodRepository>();
+builder.Services.AddScoped<CaregiverPaymentMethodQueryService>();
+builder.Services.AddScoped<CaregiverPaymentMethodCommandService>();
+builder.Services.AddScoped<ICaregiverPaymentMethodCommandService, CaregiverPaymentMethodCommandService>();
+builder.Services.AddScoped<ICaregiverPaymentMethodQueryService, CaregiverPaymentMethodQueryService>();
 
 
 builder.Services.AddControllers();

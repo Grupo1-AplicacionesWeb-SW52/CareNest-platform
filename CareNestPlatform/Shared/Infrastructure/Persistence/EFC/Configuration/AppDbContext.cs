@@ -1,3 +1,5 @@
+using CarNest.CaregiverPaymentMethod.Domain.Model.Aggregates;
+using CarNest.TutorPaymentMethod.Domain.Model.Aggregates;
 using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using Microsoft.EntityFrameworkCore;
 using WebApplication3.Caregivers.Domain.Model.Aggregates;
@@ -112,6 +114,34 @@ namespace WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration
 
                 entity.Property(e => e.Address).IsRequired().HasMaxLength(250);
                 entity.Property(e => e.District).IsRequired().HasMaxLength(50);
+            });
+            
+            // Configuración para TutorPaymentMethod
+            builder.Entity<TutorPaymentMethod>(entity =>
+            {
+                entity.ToTable("tutor_payment_methods");
+                entity.HasKey(tpm => tpm.Id);
+
+                entity.Property(tpm => tpm.CardNumber).IsRequired().HasMaxLength(16);
+                entity.Property(tpm => tpm.Cvv).IsRequired().HasMaxLength(3);
+                entity.Property(tpm => tpm.CardHolder).IsRequired().HasMaxLength(100);
+                entity.Property(tpm => tpm.ExpirationDate).IsRequired();
+
+                entity.HasOne<Tutor>().WithMany().HasForeignKey(tpm => tpm.TutorId).OnDelete(DeleteBehavior.Restrict);
+            });
+            
+            // Configuración para CaregiverPaymentMethod
+            builder.Entity<CaregiverPaymentMethod>(entity =>
+            {
+                entity.ToTable("caregiver_payment_methods");
+                entity.HasKey(tpm => tpm.Id);
+
+                entity.Property(tpm => tpm.CardNumber).IsRequired().HasMaxLength(16);
+                entity.Property(tpm => tpm.Cvv).IsRequired().HasMaxLength(3);
+                entity.Property(tpm => tpm.CardHolder).IsRequired().HasMaxLength(100);
+                entity.Property(tpm => tpm.ExpirationDate).IsRequired();
+
+                entity.HasOne<Caregiver>().WithMany().HasForeignKey(tpm => tpm.CaregiverId).OnDelete(DeleteBehavior.Restrict);
             });
         }
     }
