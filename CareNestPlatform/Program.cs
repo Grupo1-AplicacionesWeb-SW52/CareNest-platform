@@ -1,25 +1,21 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using CareNestPlatform.Shared.Domain.Repositories;
-using CareNestPlatform.Shared.Infrastructure.Persistence.EFC.Configuration;
-using CareNestPlatform.Shared.Infrastructure.Persistence.EFC.Repositories;
-using CareNestPlatform.Caregivers.Domain.Repositories;
-using CareNestPlatform.Caregivers.Infrastructure.Persistence.EFC.Repositories;
-using CareNestPlatform.Caregivers.Application.Internal.CommandServices;
-using CareNestPlatform.Caregivers.Application.Internal.QueryServices;
-using CareNestPlatform.Services.Application.CommandServices;
-using CareNestPlatform.Services.Application.QueryServices;
-using CareNestPlatform.Services.Domain.Repositories;
-using CareNestPlatform.Services.Infrastructure.Persistence.EFC.Repositories;
-using CareNestPlatform.Payments.Domain.Repositories;
-using CareNestPlatform.Payments.Infrastructure.Persistence.EFC.Repositories;
-using CareNestPlatform.Payments.Application.Internal.CommandServices;
-using CareNestPlatform.Payments.Application.Internal.QueryServices;
-using CareNestPlatform.Shared.Interfaces.ASP.Configuration;
-using CareNestPlatform.Tutors.Application.Internal.CommandServices;
-using CareNestPlatform.Tutors.Application.Internal.QueryServices;
-using CareNestPlatform.Tutors.Domain.Repositories;
-using CareNestPlatform.Tutors.Infrastructure.Persistence.EFC.Repositories;
+using WebApplication3.Shared.Domain.Repositories;
+using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration;
+using WebApplication3.Shared.Infrastructure.Persistence.EFC.Repositories;
+using WebApplication3.Caregivers.Domain.Repositories;
+using WebApplication3.Caregivers.Infrastructure.Persistence.EFC.Repositories;
+using WebApplication3.Caregivers.Application.Internal.CommandServices;
+using WebApplication3.Caregivers.Application.Internal.QueryServices;
+using WebApplication3.Services.Application.CommandServices;
+using WebApplication3.Services.Application.QueryServices;
+using WebApplication3.Services.Domain.Repositories;
+using WebApplication3.Services.Infrastructure.Persistence.EFC.Repositories;
+using WebApplication3.Shared.Interfaces.ASP.Configuration;
+using WebApplication3.Tutors.Application.Internal.CommandServices;
+using WebApplication3.Tutors.Application.Internal.QueryServices;
+using WebApplication3.Tutors.Domain.Repositories;
+using WebApplication3.Tutors.Infrastructure.Persistence.EFC.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,13 +52,13 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "WebApplication3 API",
+        Title = "CareNestPlatform API",
         Version = "v1",
-        Description = "API for WebApplication3 Project",
+        Description = "API for CareNestPlatform Project",
         Contact = new OpenApiContact
         {
-            Name = "Your Company",
-            Email = "contact@yourcompany.com"
+            Name = "Edu Nest",
+            Email = "contact@edunest.com"
         }
     });
     c.EnableAnnotations();
@@ -101,12 +97,13 @@ builder.Services.AddScoped<CaregiverCommandService>();
 builder.Services.AddScoped<CaregiverQueryService>();
 
 builder.Services.AddScoped<ITutorRepository, TutorRepository>();
-builder.Services.AddScoped<TutorQueryService>();
+builder.Services.AddScoped<TutorQueryService>();  
 builder.Services.AddScoped<TutorCommandService>();
 
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 builder.Services.AddScoped<ServiceQueryService>();
 builder.Services.AddScoped<ServiceCommandService>();
+
 
 builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
 builder.Services.AddScoped<ScheduleQueryService>();
@@ -115,11 +112,8 @@ builder.Services.AddScoped<ScheduleCommandService>();
 builder.Services.AddScoped<IWorkaroundRepository, WorkaroundRepository>();
 builder.Services.AddScoped<WorkaroundCommandService>();
 
-// **Agregado para Payment**
-builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();  // Repositorio de Payment
 
-builder.Services.AddScoped<PaymentCommandService>();  // Agregado servicio de comandos de Payment
-builder.Services.AddScoped<PaymentQueryService>();    // Agregado servicio de consulta de Payment
+
 
 builder.Services.AddControllers();
 
