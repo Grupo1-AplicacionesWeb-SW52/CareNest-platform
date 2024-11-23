@@ -7,73 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Chats\Application\CommandServices\" />
-      <Folder Include="Chats\Application\QueryServices\" />
-      <Folder Include="Chats\Domain\Model\Aggregates\" />
-      <Folder Include="Chats\Domain\Model\Commands\" />
-      <Folder Include="Chats\Domain\Model\Queries\" />
-      <Folder Include="Chats\Domain\Model\ValueObjects\" />
-      <Folder Include="Chats\Domain\Repositories\" />
-      <Folder Include="Chats\Domain\Services\" />
-      <Folder Include="Chats\Infrastructure\Persistence\EFC\Repositories\" />
-      <Folder Include="Chats\Interfaces\REST\Resources\" />
-      <Folder Include="Chats\Interfaces\REST\Transform\" />
-      <Folder Include="Payments\Application\CommandServices\" />
-      <Folder Include="Payments\Application\QueryServices\" />
-      <Folder Include="Payments\Domain\Model\Aggregates\" />
-      <Folder Include="Payments\Domain\Model\Commands\" />
-      <Folder Include="Payments\Domain\Model\Queries\" />
-      <Folder Include="Payments\Domain\Model\ValueObjects\" />
-      <Folder Include="Payments\Domain\Repositories\" />
-      <Folder Include="Payments\Domain\Services\" />
-      <Folder Include="Payments\Infrastructure\Persistence\EFC\Repositories\" />
-      <Folder Include="Payments\Interfaces\REST\Resources\" />
-      <Folder Include="Payments\Interfaces\REST\Transform\" />
-      <Folder Include="Program\Application\CommandServices\" />
-      <Folder Include="Program\Application\QueryServices\" />
-      <Folder Include="Program\Domain\Model\Aggregates\" />
-      <Folder Include="Program\Domain\Model\Commands\" />
-      <Folder Include="Program\Domain\Model\Queries\" />
-      <Folder Include="Program\Domain\Model\ValueObjects\" />
-      <Folder Include="Program\Domain\Repositories\" />
-      <Folder Include="Program\Domain\Services\" />
-      <Folder Include="Program\Infrastructure\Persistence\EFC\Repositories\" />
-      <Folder Include="Program\Interfaces\REST\Resources\" />
-      <Folder Include="Program\Interfaces\REST\Transform\" />
-      <Folder Include="Reservations\Application\CommandServices\" />
-      <Folder Include="Reservations\Application\QueryServices\" />
-      <Folder Include="Reservations\Domain\Model\Aggregates\" />
-      <Folder Include="Reservations\Domain\Model\Commands\" />
-      <Folder Include="Reservations\Domain\Model\Queries\" />
-      <Folder Include="Reservations\Domain\Model\ValueObjects\" />
-      <Folder Include="Reservations\Domain\Repositories\" />
-      <Folder Include="Reservations\Domain\Services\" />
-      <Folder Include="Reservations\Infrastructure\Persistence\EFC\Repositories\" />
-      <Folder Include="Reservations\Interfaces\REST\Resources\" />
-      <Folder Include="Reservations\Interfaces\REST\Transform\" />
-      <Folder Include="Services\Domain\Model\ValueObjects\" />
-      <Folder Include="Startup\Application\CommandServices\" />
-      <Folder Include="Startup\Application\QueryServices\" />
-      <Folder Include="Startup\Domain\Model\Aggregates\" />
-      <Folder Include="Startup\Domain\Model\Commands\" />
-      <Folder Include="Startup\Domain\Model\Queries\" />
-      <Folder Include="Startup\Domain\Model\ValueObjects\" />
-      <Folder Include="Startup\Domain\Repositories\" />
-      <Folder Include="Startup\Domain\Services\" />
-      <Folder Include="Startup\Infrastructure\Persistence\EFC\Repositories\" />
-      <Folder Include="Startup\Interfaces\REST\Resources\" />
-      <Folder Include="Startup\Interfaces\REST\Transform\" />
-      <Folder Include="UserPaymentMethods\Application\CommandServices\" />
-      <Folder Include="UserPaymentMethods\Application\QueryServices\" />
-      <Folder Include="UserPaymentMethods\Domain\Model\Aggregates\" />
-      <Folder Include="UserPaymentMethods\Domain\Model\Commands\" />
-      <Folder Include="UserPaymentMethods\Domain\Model\Queries\" />
-      <Folder Include="UserPaymentMethods\Domain\Model\ValueObjects\" />
-      <Folder Include="UserPaymentMethods\Domain\Repositories\" />
-      <Folder Include="UserPaymentMethods\Domain\Services\" />
-      <Folder Include="UserPaymentMethods\Infrastructure\Persistence\EFC\Repositories\" />
-      <Folder Include="UserPaymentMethods\Interfaces\REST\Resources\" />
-      <Folder Include="UserPaymentMethods\Interfaces\REST\Transform\" />
       <Folder Include="ServiceDetail\Application\CommandServices\" />
       <Folder Include="ServiceDetail\Application\QueryServices\" />
       <Folder Include="ServiceDetail\Domain\Model\Aggregates\" />
@@ -85,6 +18,11 @@
       <Folder Include="ServiceDetail\Infrastructure\Persistence\EFC\Repositories\" />
       <Folder Include="ServiceDetail\Interfaces\REST\Resources\" />
       <Folder Include="ServiceDetail\Interfaces\REST\Transform\" />
+      <Folder Include="ServiceDetail\Interfaces\REST\Transform\DTOs\" />
+      <Folder Include="ServiceDetail\Interfaces\REST\Transform\ViewModels\" />
+
+
+
 
     </ItemGroup>
 

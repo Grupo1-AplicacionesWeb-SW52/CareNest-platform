@@ -1,5 +1,4 @@
 using System.Threading.Tasks;
-using WebApplication3.ServiceDetail.Domain.Model.Aggregates;
 using WebApplication3.ServiceDetail.Domain.Repositories;
 
 namespace WebApplication3.ServiceDetail.Application.Internal.CommandServices
@@ -13,12 +12,12 @@ namespace WebApplication3.ServiceDetail.Application.Internal.CommandServices
             _repository = repository;
         }
 
-        public async Task CreateServiceDetail(ServiceDetail serviceDetail)
+        public async Task CreateServiceDetail(WebApplication3.ServiceDetail.Domain.Model.Aggregates.ServiceDetail serviceDetail)
         {
             await _repository.AddAsync(serviceDetail);
         }
 
-        public async Task UpdateServiceDetail(ServiceDetail serviceDetail)
+        public async Task UpdateServiceDetail(WebApplication3.ServiceDetail.Domain.Model.Aggregates.ServiceDetail serviceDetail)
         {
             await _repository.UpdateAsync(serviceDetail);
         }

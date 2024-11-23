@@ -33,14 +33,14 @@ namespace WebApplication3.ServiceDetail.Interfaces.ASP.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] ServiceDetail serviceDetail)
+        public async Task<IActionResult> Create([FromBody] WebApplication3.ServiceDetail.Domain.Model.Aggregates.ServiceDetail serviceDetail)
         {
             await _repository.AddAsync(serviceDetail);
             return CreatedAtAction(nameof(GetById), new { id = serviceDetail.Id }, serviceDetail);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] ServiceDetail serviceDetail)
+        public async Task<IActionResult> Update(int id, [FromBody] WebApplication3.ServiceDetail.Domain.Model.Aggregates.ServiceDetail serviceDetail)
         {
             if (id != serviceDetail.Id) return BadRequest();
             await _repository.UpdateAsync(serviceDetail);

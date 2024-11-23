@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebApplication3.ServiceDetail.Domain.Model.Aggregates;
 using WebApplication3.ServiceDetail.Domain.Repositories;
 
 namespace WebApplication3.ServiceDetail.Application.Internal.QueryServices
@@ -14,12 +13,12 @@ namespace WebApplication3.ServiceDetail.Application.Internal.QueryServices
             _repository = repository;
         }
 
-        public async Task<IEnumerable<ServiceDetail>> GetAllServiceDetails()
+        public async Task<IEnumerable<WebApplication3.ServiceDetail.Domain.Model.Aggregates.ServiceDetail>> GetAllServiceDetails()
         {
             return await _repository.GetAllAsync();
         }
 
-        public async Task<ServiceDetail> GetServiceDetailById(int id)
+        public async Task<WebApplication3.ServiceDetail.Domain.Model.Aggregates.ServiceDetail> GetServiceDetailById(int id)
         {
             return await _repository.GetByIdAsync(id);
         }

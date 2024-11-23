@@ -3,23 +3,12 @@ using Microsoft.OpenApi.Models;
 using WebApplication3.Shared.Domain.Repositories;
 using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration;
 using WebApplication3.Shared.Infrastructure.Persistence.EFC.Repositories;
-using WebApplication3.Caregivers.Domain.Repositories;
-using WebApplication3.Caregivers.Infrastructure.Persistence.EFC.Repositories;
-using WebApplication3.Caregivers.Application.Internal.CommandServices;
-using WebApplication3.Caregivers.Application.Internal.QueryServices;
-using WebApplication3.Services.Application.CommandServices;
-using WebApplication3.Services.Application.QueryServices;
-using WebApplication3.Services.Domain.Repositories;
-using WebApplication3.Services.Infrastructure.Persistence.EFC.Repositories;
 using WebApplication3.Shared.Interfaces.ASP.Configuration;
-using WebApplication3.Tutors.Application.Internal.CommandServices;
-using WebApplication3.Tutors.Application.Internal.QueryServices;
-using WebApplication3.Tutors.Domain.Repositories;
-using WebApplication3.Tutors.Infrastructure.Persistence.EFC.Repositories;
 using WebApplication3.ServiceDetail.Application.Internal.CommandServices;
 using WebApplication3.ServiceDetail.Application.Internal.QueryServices;
 using WebApplication3.ServiceDetail.Domain.Repositories;
 using WebApplication3.ServiceDetail.Infrastructure.Persistence.EFC.Repositories;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -98,17 +87,6 @@ builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 // Configure Dependency Injection
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<ICaregiverRepository, CaregiverRepository>();
-builder.Services.AddScoped<CaregiverCommandService>();
-builder.Services.AddScoped<CaregiverQueryService>();
-
-builder.Services.AddScoped<ITutorRepository, TutorRepository>();
-builder.Services.AddScoped<TutorQueryService>();  // Asegúrate de registrar el servicio aquí
-builder.Services.AddScoped<TutorCommandService>();
-
-builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
-builder.Services.AddScoped<ServiceQueryService>();
-builder.Services.AddScoped<ServiceCommandService>();
 
 builder.Services.AddScoped<IServiceDetailRepository, ServiceDetailRepository>();
 builder.Services.AddScoped<ServiceDetailQueryService>();

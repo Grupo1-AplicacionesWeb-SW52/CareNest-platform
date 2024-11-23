@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace WebApplication3.Domain.Model.Aggregates
+namespace WebApplication3.ServiceDetail.Domain.Model.Aggregates
 {
     public class ServiceDetail
     {

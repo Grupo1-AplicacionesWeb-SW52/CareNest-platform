@@ -5,7 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using WebApplication3.ServiceDetail.Domain.Model.Aggregates;
 using WebApplication3.ServiceDetail.Domain.Repositories;
 
-namespace WebApplication3.ServiceDetail.Infrastructure.Persistence.Repositories
+
+namespace WebApplication3.ServiceDetail.Infrastructure.Persistence.EFC.Repositories
 {
     public class ServiceDetailRepository : IServiceDetailRepository
     {
@@ -16,23 +17,23 @@ namespace WebApplication3.ServiceDetail.Infrastructure.Persistence.Repositories
             _context = context;
         }
 
-        public async Task<ServiceDetail> GetByIdAsync(int id)
+        public async Task<WebApplication3.ServiceDetail.Domain.Model.Aggregates.ServiceDetail> GetByIdAsync(int id)
         {
             return await _context.ServiceDetails.FindAsync(id);
         }
 
-        public async Task<IEnumerable<ServiceDetail>> GetAllAsync()
+        public async Task<IEnumerable<WebApplication3.ServiceDetail.Domain.Model.Aggregates.ServiceDetail>> GetAllAsync()
         {
             return await _context.ServiceDetails.ToListAsync();
         }
 
-        public async Task AddAsync(ServiceDetail serviceDetail)
+        public async Task AddAsync(WebApplication3.ServiceDetail.Domain.Model.Aggregates.ServiceDetail serviceDetail)
         {
             await _context.ServiceDetails.AddAsync(serviceDetail);
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(ServiceDetail serviceDetail)
+        public async Task UpdateAsync(WebApplication3.ServiceDetail.Domain.Model.Aggregates.ServiceDetail serviceDetail)
         {
             _context.ServiceDetails.Update(serviceDetail);
             await _context.SaveChangesAsync();
