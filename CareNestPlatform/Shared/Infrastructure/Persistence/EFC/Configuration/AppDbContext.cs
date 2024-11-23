@@ -1,11 +1,11 @@
 using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using Microsoft.EntityFrameworkCore;
-using WebApplication3.Caregivers.Domain.Model.Aggregates;
-using WebApplication3.Services.Domain.Model.Aggregates;
-using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
-using WebApplication3.Tutors.Domain.Model.Aggregates;
+using CarNest.Caregivers.Domain.Model.Aggregates;
+using CarNest.Services.Domain.Model.Aggregates;
+using CarNest.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
+using CarNest.Tutors.Domain.Model.Aggregates;
 
-namespace WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration
+namespace CarNest.Shared.Infrastructure.Persistence.EFC.Configuration
 {
     public class AppDbContext : DbContext
     {
@@ -113,6 +113,9 @@ namespace WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration
                 entity.Property(e => e.Address).IsRequired().HasMaxLength(250);
                 entity.Property(e => e.District).IsRequired().HasMaxLength(50);
             });
+            
+            // Configuración para Reservation
+            
         }
     }
 }

@@ -1,6 +1,6 @@
-using WebApplication3.Services.Domain.Model.Aggregates;
+using CarNest.Services.Domain.Model.Aggregates;
 
-namespace WebApplication3.Services.Domain.Repositories;
+namespace CarNest.Services.Domain.Repositories;
 
 public interface IScheduleRepository
 {

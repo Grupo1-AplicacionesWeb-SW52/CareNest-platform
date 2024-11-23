@@ -1,4 +1,4 @@
-namespace WebApplication3.Shared.Domain.Repositories;
+namespace CarNest.Shared.Domain.Repositories;
 
 public interface IBaseRepository<TEntity>
 {

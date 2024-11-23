@@ -1,6 +1,6 @@
-using WebApplication3.Services.Domain.Model.Aggregates;
+using CarNest.Services.Domain.Model.Aggregates;
 
-namespace WebApplication3.Tutors.Domain.Model.Aggregates;
+namespace CarNest.Tutors.Domain.Model.Aggregates;
 
 public class Tutor
 {

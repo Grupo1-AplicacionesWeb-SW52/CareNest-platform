@@ -1,4 +1,4 @@
-namespace WebApplication3.Services.Domain.Model.Queries;
+namespace CarNest.Services.Domain.Model.Queries;
 
 public class GetAllServicesQuery
 {

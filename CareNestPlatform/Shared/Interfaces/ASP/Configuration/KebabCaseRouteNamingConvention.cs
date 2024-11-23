@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using WebApplication3.Shared.Interfaces.ASP.Configuration.Extensions;
+using CarNest.Shared.Interfaces.ASP.Configuration.Extensions;
 
-namespace WebApplication3.Shared.Interfaces.ASP.Configuration;
+namespace CarNest.Shared.Interfaces.ASP.Configuration;
 
 public class KebabCaseRouteNamingConvention : IControllerModelConvention
 {

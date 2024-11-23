@@ -1,7 +1,7 @@
-using WebApplication3.Caregivers.Domain.Model.Aggregates;
-using WebApplication3.Caregivers.Domain.Repositories;
+using CarNest.Caregivers.Domain.Model.Aggregates;
+using CarNest.Caregivers.Domain.Repositories;
 
-namespace WebApplication3.Caregivers.Application.Internal.QueryServices;
+namespace CarNest.Caregivers.Application.Internal.QueryServices;
 
 public class CaregiverQueryService
 {

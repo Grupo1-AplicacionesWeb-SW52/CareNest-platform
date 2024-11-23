@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using WebApplication3.Caregivers.Application.Internal.CommandServices;
-using WebApplication3.Caregivers.Application.Internal.QueryServices;
-using WebApplication3.Caregivers.Domain.Model.Aggregates;
-using WebApplication3.Caregivers.Domain.Model.Commands;
+using CarNest.Caregivers.Application.Internal.CommandServices;
+using CarNest.Caregivers.Application.Internal.QueryServices;
+using CarNest.Caregivers.Domain.Model.Aggregates;
+using CarNest.Caregivers.Domain.Model.Commands;
 
-namespace WebApplication3.Caregivers.Interfaces.REST
+namespace CarNest.Caregivers.Interfaces.REST
 {
     [ApiController]
     [Route("api/caregivers")]

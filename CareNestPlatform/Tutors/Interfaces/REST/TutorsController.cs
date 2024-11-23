@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using WebApplication3.Tutors.Application.Internal.CommandServices;
-using WebApplication3.Tutors.Application.Internal.QueryServices;
-using WebApplication3.Tutors.Domain.Model.Aggregates;
-using WebApplication3.Tutors.Domain.Model.Commands;
+using CarNest.Tutors.Application.Internal.CommandServices;
+using CarNest.Tutors.Application.Internal.QueryServices;
+using CarNest.Tutors.Domain.Model.Aggregates;
+using CarNest.Tutors.Domain.Model.Commands;
 
-namespace WebApplication3.Tutors.Interfaces.REST;
+namespace CarNest.Tutors.Interfaces.REST;
 
 [ApiController]
 [Route("api/tutors")]

@@ -1,9 +1,9 @@
-using WebApplication3.Caregivers.Domain.Model.Aggregates;
-using WebApplication3.Caregivers.Domain.Repositories;
-using WebApplication3.Tutors.Domain.Model.Aggregates;
-using WebApplication3.Tutors.Domain.Repositories;
+using CarNest.Caregivers.Domain.Model.Aggregates;
+using CarNest.Caregivers.Domain.Repositories;
+using CarNest.Tutors.Domain.Model.Aggregates;
+using CarNest.Tutors.Domain.Repositories;
 
-namespace WebApplication3.Tutors.Application.Internal.CommandServices;
+namespace CarNest.Tutors.Application.Internal.CommandServices;
 
 public class TutorCommandService
 {

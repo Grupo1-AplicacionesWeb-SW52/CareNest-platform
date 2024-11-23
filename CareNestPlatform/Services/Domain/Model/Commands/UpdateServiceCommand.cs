@@ -1,4 +1,4 @@
-namespace WebApplication3.Services.Domain.Model.Commands;
+namespace CarNest.Services.Domain.Model.Commands;
 
 public class UpdateServiceCommand
 {

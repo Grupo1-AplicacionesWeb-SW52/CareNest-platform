@@ -1,4 +1,4 @@
-namespace WebApplication3.Caregivers.Domain.Model.Commands;
+namespace CarNest.Caregivers.Domain.Model.Commands;
 
 public class UpdateCaregiverCommand
 {

@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using WebApplication3.Services.Domain.Model.Aggregates;
-using WebApplication3.Services.Domain.Repositories;
-using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration;
+using CarNest.Services.Domain.Model.Aggregates;
+using CarNest.Services.Domain.Repositories;
+using CarNest.Shared.Infrastructure.Persistence.EFC.Configuration;
 
-namespace WebApplication3.Services.Infrastructure.Persistence.EFC.Repositories;
+namespace CarNest.Services.Infrastructure.Persistence.EFC.Repositories;
 
 public class WorkaroundRepository : IWorkaroundRepository
 {

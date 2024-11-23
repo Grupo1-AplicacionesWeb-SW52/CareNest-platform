@@ -1,4 +1,4 @@
-namespace WebApplication3.Tutors.Domain.Model.Commands;
+namespace CarNest.Tutors.Domain.Model.Commands;
 
 public class CreateTutorCommand
 {

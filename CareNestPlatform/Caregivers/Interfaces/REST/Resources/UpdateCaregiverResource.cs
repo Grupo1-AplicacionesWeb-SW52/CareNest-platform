@@ -1,4 +1,4 @@
-namespace WebApplication3.Caregivers.Interfaces.REST.Resources;
+namespace CarNest.Caregivers.Interfaces.REST.Resources;
 
 public class UpdateCaregiverResource
 {

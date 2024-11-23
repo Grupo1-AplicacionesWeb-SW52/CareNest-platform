@@ -1,4 +1,4 @@
-namespace WebApplication3.Tutors.Domain.Services;
+namespace CarNest.Tutors.Domain.Services;
 
 public class ITutorQueryService
 {

@@ -1,4 +1,4 @@
-namespace WebApplication3.Services.Domain.Model.Aggregates;
+namespace CarNest.Services.Domain.Model.Aggregates;
 
 public class WorkHours
 {

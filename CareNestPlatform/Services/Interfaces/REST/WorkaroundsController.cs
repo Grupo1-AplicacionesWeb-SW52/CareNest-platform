@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using WebApplication3.Services.Application.CommandServices;
-using WebApplication3.Services.Domain.Repositories;
-using WebApplication3.Services.Interfaces.REST.Resources;
-using WebApplication3.Services.Interfaces.REST.Transform;
+using CarNest.Services.Application.CommandServices;
+using CarNest.Services.Domain.Repositories;
+using CarNest.Services.Interfaces.REST.Resources;
+using CarNest.Services.Interfaces.REST.Transform;
 
-namespace WebApplication3.Services.Interfaces.REST;
+namespace CarNest.Services.Interfaces.REST;
 
 [ApiController]
 [Route("api/workarounds")]

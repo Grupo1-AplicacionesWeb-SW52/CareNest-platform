@@ -1,9 +1,9 @@
-using WebApplication3.Caregivers.Domain.Model.Aggregates;
-using WebApplication3.Caregivers.Interfaces.REST.Resources;
-using WebApplication3.Tutors.Domain.Model.Aggregates;
-using WebApplication3.Tutors.Interfaces.REST.Resources;
+using CarNest.Caregivers.Domain.Model.Aggregates;
+using CarNest.Caregivers.Interfaces.REST.Resources;
+using CarNest.Tutors.Domain.Model.Aggregates;
+using CarNest.Tutors.Interfaces.REST.Resources;
 
-namespace WebApplication3.Tutors.Interfaces.REST.Transform;
+namespace CarNest.Tutors.Interfaces.REST.Transform;
 
 
 public static class TutorResourceFromEntityAssembler

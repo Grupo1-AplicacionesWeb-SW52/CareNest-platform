@@ -1,8 +1,8 @@
-using WebApplication3.Services.Domain.Model.Aggregates;
-using WebApplication3.Services.Domain.Repositories;
-using WebApplication3.Services.Domain.Services;
+using CarNest.Services.Domain.Model.Aggregates;
+using CarNest.Services.Domain.Repositories;
+using CarNest.Services.Domain.Services;
 
-namespace WebApplication3.Services.Application.QueryServices;
+namespace CarNest.Services.Application.QueryServices;
 
 public class ServiceQueryService : IServiceQueryService
 {

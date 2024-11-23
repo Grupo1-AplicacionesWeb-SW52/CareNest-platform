@@ -1,21 +1,21 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using WebApplication3.Shared.Domain.Repositories;
-using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration;
-using WebApplication3.Shared.Infrastructure.Persistence.EFC.Repositories;
-using WebApplication3.Caregivers.Domain.Repositories;
-using WebApplication3.Caregivers.Infrastructure.Persistence.EFC.Repositories;
-using WebApplication3.Caregivers.Application.Internal.CommandServices;
-using WebApplication3.Caregivers.Application.Internal.QueryServices;
-using WebApplication3.Services.Application.CommandServices;
-using WebApplication3.Services.Application.QueryServices;
-using WebApplication3.Services.Domain.Repositories;
-using WebApplication3.Services.Infrastructure.Persistence.EFC.Repositories;
-using WebApplication3.Shared.Interfaces.ASP.Configuration;
-using WebApplication3.Tutors.Application.Internal.CommandServices;
-using WebApplication3.Tutors.Application.Internal.QueryServices;
-using WebApplication3.Tutors.Domain.Repositories;
-using WebApplication3.Tutors.Infrastructure.Persistence.EFC.Repositories;
+using CarNest.Shared.Domain.Repositories;
+using CarNest.Shared.Infrastructure.Persistence.EFC.Configuration;
+using CarNest.Shared.Infrastructure.Persistence.EFC.Repositories;
+using CarNest.Caregivers.Domain.Repositories;
+using CarNest.Caregivers.Infrastructure.Persistence.EFC.Repositories;
+using CarNest.Caregivers.Application.Internal.CommandServices;
+using CarNest.Caregivers.Application.Internal.QueryServices;
+using CarNest.Services.Application.CommandServices;
+using CarNest.Services.Application.QueryServices;
+using CarNest.Services.Domain.Repositories;
+using CarNest.Services.Infrastructure.Persistence.EFC.Repositories;
+using CarNest.Shared.Interfaces.ASP.Configuration;
+using CarNest.Tutors.Application.Internal.CommandServices;
+using CarNest.Tutors.Application.Internal.QueryServices;
+using CarNest.Tutors.Domain.Repositories;
+using CarNest.Tutors.Infrastructure.Persistence.EFC.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 

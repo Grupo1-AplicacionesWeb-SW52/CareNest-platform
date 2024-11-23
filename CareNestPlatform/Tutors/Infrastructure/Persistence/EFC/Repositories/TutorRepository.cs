@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration;
-using WebApplication3.Tutors.Domain.Model.Aggregates;
-using WebApplication3.Tutors.Domain.Repositories;
+using CarNest.Shared.Infrastructure.Persistence.EFC.Configuration;
+using CarNest.Tutors.Domain.Model.Aggregates;
+using CarNest.Tutors.Domain.Repositories;
 
-namespace WebApplication3.Tutors.Infrastructure.Persistence.EFC.Repositories;
+namespace CarNest.Tutors.Infrastructure.Persistence.EFC.Repositories;
 
 public class TutorRepository : ITutorRepository
 {

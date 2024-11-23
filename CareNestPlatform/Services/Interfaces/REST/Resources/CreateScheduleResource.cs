@@ -1,4 +1,4 @@
-namespace WebApplication3.Services.Interfaces.REST.Resources;
+namespace CarNest.Services.Interfaces.REST.Resources;
 
 public class CreateScheduleResource
 {

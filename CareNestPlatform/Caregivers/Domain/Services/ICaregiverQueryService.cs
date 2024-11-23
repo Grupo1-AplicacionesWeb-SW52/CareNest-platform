@@ -1,4 +1,4 @@
-namespace WebApplication3.Caregivers.Domain.Services;
+namespace CarNest.Caregivers.Domain.Services;
 
 public class ICaregiverQueryService
 {

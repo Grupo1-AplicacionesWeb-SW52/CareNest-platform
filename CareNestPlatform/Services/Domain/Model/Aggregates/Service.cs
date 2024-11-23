@@ -1,6 +1,6 @@
-using WebApplication3.Caregivers.Domain.Model.Aggregates;
+using CarNest.Caregivers.Domain.Model.Aggregates;
 
-namespace WebApplication3.Services.Domain.Model.Aggregates;
+namespace CarNest.Services.Domain.Model.Aggregates;
 
 public class Service
 {

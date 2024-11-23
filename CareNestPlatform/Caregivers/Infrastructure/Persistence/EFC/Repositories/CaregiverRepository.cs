@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using WebApplication3.Caregivers.Domain.Model.Aggregates;
-using WebApplication3.Caregivers.Domain.Repositories;
-using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration;
+using CarNest.Caregivers.Domain.Model.Aggregates;
+using CarNest.Caregivers.Domain.Repositories;
+using CarNest.Shared.Infrastructure.Persistence.EFC.Configuration;
 
-namespace WebApplication3.Caregivers.Infrastructure.Persistence.EFC.Repositories;
+namespace CarNest.Caregivers.Infrastructure.Persistence.EFC.Repositories;
 
 public class CaregiverRepository : ICaregiverRepository
 {

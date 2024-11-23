@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace WebApplication3.Shared.Interfaces.ASP.Configuration.Extensions;
+namespace CarNest.Shared.Interfaces.ASP.Configuration.Extensions;
 
 public static partial class StringExtensions
 {

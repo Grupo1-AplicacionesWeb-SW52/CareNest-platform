@@ -1,7 +1,7 @@
-using WebApplication3.Caregivers.Interfaces.REST.Resources;
-using WebApplication3.Services.Domain.Model.Aggregates;
+using CarNest.Caregivers.Interfaces.REST.Resources;
+using CarNest.Services.Domain.Model.Aggregates;
 
-namespace WebApplication3.Services.Interfaces.REST.Resources;
+namespace CarNest.Services.Interfaces.REST.Resources;
 
 public class ServiceResource
 {

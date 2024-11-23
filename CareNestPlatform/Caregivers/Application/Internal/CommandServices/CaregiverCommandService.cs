@@ -1,7 +1,7 @@
-using WebApplication3.Caregivers.Domain.Repositories;
-using WebApplication3.Caregivers.Domain.Model.Aggregates;
+using CarNest.Caregivers.Domain.Repositories;
+using CarNest.Caregivers.Domain.Model.Aggregates;
 
-namespace WebApplication3.Caregivers.Application.Internal.CommandServices;
+namespace CarNest.Caregivers.Application.Internal.CommandServices;
 
 public class CaregiverCommandService
 {

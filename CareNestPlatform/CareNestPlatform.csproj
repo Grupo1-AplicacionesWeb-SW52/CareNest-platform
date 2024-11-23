@@ -43,7 +43,6 @@
       <Folder Include="Program\Interfaces\REST\Transform\" />
       <Folder Include="Reservations\Application\CommandServices\" />
       <Folder Include="Reservations\Application\QueryServices\" />
-      <Folder Include="Reservations\Domain\Model\Aggregates\" />
       <Folder Include="Reservations\Domain\Model\Commands\" />
       <Folder Include="Reservations\Domain\Model\Queries\" />
       <Folder Include="Reservations\Domain\Model\ValueObjects\" />

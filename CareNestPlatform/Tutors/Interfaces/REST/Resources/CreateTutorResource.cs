@@ -1,4 +1,4 @@
-namespace WebApplication3.Tutors.Interfaces.REST.Resources;
+namespace CarNest.Tutors.Interfaces.REST.Resources;
 
 public class CreateTutorResource
 {

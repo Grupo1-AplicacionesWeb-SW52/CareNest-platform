@@ -1,8 +1,8 @@
 
-using WebApplication3.Tutors.Domain.Model.Aggregates;
-using WebApplication3.Tutors.Domain.Repositories;
+using CarNest.Tutors.Domain.Model.Aggregates;
+using CarNest.Tutors.Domain.Repositories;
 
-namespace WebApplication3.Tutors.Application.Internal.QueryServices;
+namespace CarNest.Tutors.Application.Internal.QueryServices;
 
 public class TutorQueryService
 {

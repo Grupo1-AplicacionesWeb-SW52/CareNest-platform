@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApplication3.Services.Domain.Model.Aggregates;
-using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration;
+using CarNest.Services.Domain.Model.Aggregates;
+using CarNest.Shared.Infrastructure.Persistence.EFC.Configuration;
 
-namespace WebApplication3.Services.Interfaces.REST;
+namespace CarNest.Services.Interfaces.REST;
 
 [ApiController]
 [Route("api/[controller]")]

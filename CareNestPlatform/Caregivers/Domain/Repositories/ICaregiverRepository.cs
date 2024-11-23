@@ -1,6 +1,6 @@
-using WebApplication3.Caregivers.Domain.Model.Aggregates;
+using CarNest.Caregivers.Domain.Model.Aggregates;
 
-namespace WebApplication3.Caregivers.Domain.Repositories;
+namespace CarNest.Caregivers.Domain.Repositories;
 
 public interface ICaregiverRepository
 {

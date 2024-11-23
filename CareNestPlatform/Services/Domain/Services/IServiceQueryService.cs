@@ -1,4 +1,4 @@
-namespace WebApplication3.Services.Domain.Services;
+namespace CarNest.Services.Domain.Services;
 
 public class IServiceQueryService
 {

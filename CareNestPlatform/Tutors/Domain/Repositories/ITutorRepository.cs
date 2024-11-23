@@ -1,7 +1,7 @@
-using WebApplication3.Caregivers.Domain.Model.Aggregates;
-using WebApplication3.Tutors.Domain.Model.Aggregates;
+using CarNest.Caregivers.Domain.Model.Aggregates;
+using CarNest.Tutors.Domain.Model.Aggregates;
 
-namespace WebApplication3.Tutors.Domain.Repositories;
+namespace CarNest.Tutors.Domain.Repositories;
 
 public interface ITutorRepository
 {

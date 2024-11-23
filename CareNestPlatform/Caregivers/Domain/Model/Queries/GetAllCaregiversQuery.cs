@@ -1,4 +1,4 @@
-namespace WebApplication3.Caregivers.Domain.Model.Queries;
+namespace CarNest.Caregivers.Domain.Model.Queries;
 
 public class GetAllCaregiversQuery
 {

@@ -1,7 +1,7 @@
-using WebApplication3.Caregivers.Domain.Model.Aggregates;
-using WebApplication3.Caregivers.Interfaces.REST.Resources;
+using CarNest.Caregivers.Domain.Model.Aggregates;
+using CarNest.Caregivers.Interfaces.REST.Resources;
 
-namespace WebApplication3.Caregivers.Interfaces.REST.Transform;
+namespace CarNest.Caregivers.Interfaces.REST.Transform;
 
 
 public static class CaregiverResourceFromEntityAssembler

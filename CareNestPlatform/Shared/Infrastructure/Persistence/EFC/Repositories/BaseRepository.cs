@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using WebApplication3.Shared.Domain.Repositories;
-using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration;
+using CarNest.Shared.Domain.Repositories;
+using CarNest.Shared.Infrastructure.Persistence.EFC.Configuration;
 
-namespace WebApplication3.Shared.Infrastructure.Persistence.EFC.Repositories;
+namespace CarNest.Shared.Infrastructure.Persistence.EFC.Repositories;
 
 public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
 {

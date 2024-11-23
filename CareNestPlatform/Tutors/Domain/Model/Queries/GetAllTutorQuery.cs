@@ -1,4 +1,4 @@
-namespace WebApplication3.Tutors.Domain.Model.Queries;
+namespace CarNest.Tutors.Domain.Model.Queries;
 
 public class GetAllTutorQuery
 {

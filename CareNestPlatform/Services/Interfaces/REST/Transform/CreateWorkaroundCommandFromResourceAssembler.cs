@@ -1,7 +1,7 @@
-using WebApplication3.Services.Domain.Model.Aggregates;
-using WebApplication3.Services.Interfaces.REST.Resources;
+using CarNest.Services.Domain.Model.Aggregates;
+using CarNest.Services.Interfaces.REST.Resources;
 
-namespace WebApplication3.Services.Interfaces.REST.Transform;
+namespace CarNest.Services.Interfaces.REST.Transform;
 
 public static class CreateWorkaroundCommandFromResourceAssembler
 {

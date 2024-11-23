@@ -1,4 +1,4 @@
-namespace WebApplication3.Caregivers.Domain.Model.ValueObjects;
+namespace CarNest.Caregivers.Domain.Model.ValueObjects;
 
 public class CaregiverAddress
 {
