@@ -52,6 +52,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 // Learn more about configuring Swagger/OpenAPI
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -108,6 +109,10 @@ builder.Services.AddScoped<TutorCommandService>();
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 builder.Services.AddScoped<ServiceQueryService>();
 builder.Services.AddScoped<ServiceCommandService>();
+
+builder.Services.AddScoped<IServiceDetailRepository, ServiceDetailRepository>();
+builder.Services.AddScoped<ServiceDetailQueryService>();
+builder.Services.AddScoped<ServiceDetailCommandService>();
 
 
 builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
