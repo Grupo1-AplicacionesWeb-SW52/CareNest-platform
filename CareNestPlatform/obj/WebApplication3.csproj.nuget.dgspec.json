@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RenzoA\\Documents\\AppsWeb\\Backend\\WebApplication3\\WebApplication3\\WebApplication3.csproj": {}
+    "C:\\Users\\Arnold24x24\\Documents\\Projects JetBrains\\CareNest-platform-feat-service-detail\\WebApplication3\\WebApplication3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RenzoA\\Documents\\AppsWeb\\Backend\\WebApplication3\\WebApplication3\\WebApplication3.csproj": {
+    "C:\\Users\\Arnold24x24\\Documents\\Projects JetBrains\\CareNest-platform-feat-service-detail\\WebApplication3\\WebApplication3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RenzoA\\Documents\\AppsWeb\\Backend\\WebApplication3\\WebApplication3\\WebApplication3.csproj",
+        "projectUniqueName": "C:\\Users\\Arnold24x24\\Documents\\Projects JetBrains\\CareNest-platform-feat-service-detail\\WebApplication3\\WebApplication3.csproj",
         "projectName": "WebApplication3",
-        "projectPath": "C:\\Users\\RenzoA\\Documents\\AppsWeb\\Backend\\WebApplication3\\WebApplication3\\WebApplication3.csproj",
-        "packagesPath": "C:\\Users\\RenzoA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RenzoA\\Documents\\AppsWeb\\Backend\\WebApplication3\\WebApplication3\\obj\\",
+        "projectPath": "C:\\Users\\Arnold24x24\\Documents\\Projects JetBrains\\CareNest-platform-feat-service-detail\\WebApplication3\\WebApplication3.csproj",
+        "packagesPath": "C:\\Users\\Arnold24x24\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Arnold24x24\\Documents\\Projects JetBrains\\CareNest-platform-feat-service-detail\\WebApplication3\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\RenzoA\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Arnold24x24\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -115,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

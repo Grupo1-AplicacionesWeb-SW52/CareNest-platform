@@ -4,6 +4,7 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+<<<<<<< HEAD
         <RootNamespace>CarNest</RootNamespace>
     </PropertyGroup>
 
@@ -74,6 +75,28 @@
       <Folder Include="UserPaymentMethods\Infrastructure\Persistence\EFC\Repositories\" />
       <Folder Include="UserPaymentMethods\Interfaces\REST\Resources\" />
       <Folder Include="UserPaymentMethods\Interfaces\REST\Transform\" />
+=======
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="ServiceDetail\Application\CommandServices\" />
+      <Folder Include="ServiceDetail\Application\QueryServices\" />
+      <Folder Include="ServiceDetail\Domain\Model\Aggregates\" />
+      <Folder Include="ServiceDetail\Domain\Model\Commands\" />
+      <Folder Include="ServiceDetail\Domain\Model\Queries\" />
+      <Folder Include="ServiceDetail\Domain\Model\ValueObjects\" />
+      <Folder Include="ServiceDetail\Domain\Repositories\" />
+      <Folder Include="ServiceDetail\Domain\Services\" />
+      <Folder Include="ServiceDetail\Infrastructure\Persistence\EFC\Repositories\" />
+      <Folder Include="ServiceDetail\Interfaces\REST\Resources\" />
+      <Folder Include="ServiceDetail\Interfaces\REST\Transform\" />
+      <Folder Include="ServiceDetail\Interfaces\REST\Transform\DTOs\" />
+      <Folder Include="ServiceDetail\Interfaces\REST\Transform\ViewModels\" />
+
+
+
+
+>>>>>>> feat/service-detail
     </ItemGroup>
 
     <ItemGroup>
