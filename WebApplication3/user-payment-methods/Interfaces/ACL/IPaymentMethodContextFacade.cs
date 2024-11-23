@@ -4,9 +4,9 @@ namespace WebApplication3.user_payment_methods.Interfaces.ACL;
 
 public interface IPaymentMethodContextFacade
 {
-    Task<int> CreatePaymentMethodAsync(UserPaymentMethod paymentMethod);
+    Task<int> CreatePaymentMethodAsync(Domain.Model.Aggregates.TutorPaymentMethod paymentMethod);
     
-    Task<IEnumerable<UserPaymentMethod>> GetPaymentMethodsByUserAsync(int userId, string userType);
+    Task<IEnumerable<Domain.Model.Aggregates.TutorPaymentMethod>> GetPaymentMethodsByUserAsync(int userId, string userType);
 
     Task<bool> DeletePaymentMethodAsync(int paymentMethodId);
 

@@ -1,19 +1,18 @@
 using WebApplication3.Caregivers.Domain.Model.Aggregates;
 using WebApplication3.Shared.Domain.Repositories;
 using WebApplication3.Tutors.Domain.Model.Aggregates;
-using WebApplication3.user_payment_methods.Domain.Model.Aggregates;
 using WebApplication3.user_payment_methods.Interfaces.ACL;
 
 namespace WebApplication3.user_payment_methods.Application.ACL;
 
 public class PaymentMethodContextFacade : IPaymentMethodContextFacade
 {
-    private readonly IBaseRepository<UserPaymentMethod> _paymentMethodRepository;
+    private readonly IBaseRepository<Domain.Model.Aggregates.TutorPaymentMethod> _paymentMethodRepository;
     private readonly IBaseRepository<Tutor> _tutorRepository;
     private readonly IBaseRepository<Caregiver> _caregiverRepository;
 
     public PaymentMethodContextFacade(
-        IBaseRepository<UserPaymentMethod> paymentMethodRepository,
+        IBaseRepository<Domain.Model.Aggregates.TutorPaymentMethod> paymentMethodRepository,
         IBaseRepository<Tutor> tutorRepository,
         IBaseRepository<Caregiver> caregiverRepository)
     {
@@ -22,7 +21,7 @@ public class PaymentMethodContextFacade : IPaymentMethodContextFacade
         _caregiverRepository = caregiverRepository;
     }
 
-    public async Task<int> CreatePaymentMethodAsync(UserPaymentMethod paymentMethod)
+    public async Task<int> CreatePaymentMethodAsync(Domain.Model.Aggregates.TutorPaymentMethod paymentMethod)
     {
         if (paymentMethod.CaregiverId.HasValue)
         {
@@ -42,7 +41,7 @@ public class PaymentMethodContextFacade : IPaymentMethodContextFacade
         return paymentMethod.Id;
     }
 
-    public async Task<IEnumerable<UserPaymentMethod>> GetPaymentMethodsByUserAsync(int userId, string userType)
+    public async Task<IEnumerable<Domain.Model.Aggregates.TutorPaymentMethod>> GetPaymentMethodsByUserAsync(int userId, string userType)
     {
         if (userType == "caregiver")
         {

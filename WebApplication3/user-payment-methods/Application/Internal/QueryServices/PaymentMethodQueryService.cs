@@ -14,12 +14,12 @@ public class PaymentMethodQueryService : IPaymentMethodQueryService
         _paymentMethodRepository = paymentMethodRepository;
     }
 
-    public async Task<IEnumerable<UserPaymentMethod>> Handle(GetAllPaymentMethodsQuery query)
+    public async Task<IEnumerable<Domain.Model.Aggregates.TutorPaymentMethod>> Handle(GetAllPaymentMethodsQuery query)
     {
         return await _paymentMethodRepository.ListAsync();
     }
 
-    public async Task<UserPaymentMethod?> Handle(GetPaymentMethodByIdQuery query)
+    public async Task<Domain.Model.Aggregates.TutorPaymentMethod?> Handle(GetPaymentMethodByIdQuery query)
     {
         return await _paymentMethodRepository.FindPaymentMethodByIdAsync(query.Id);
     }

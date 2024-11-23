@@ -17,7 +17,7 @@ public class PaymentMethodCommandService : IPaymentMethodCommandService
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<UserPaymentMethod?> Handle(CreateUserPaymentCommand command)
+    public async Task<Domain.Model.Aggregates.TutorPaymentMethod?> Handle(CreateUserPaymentCommand command)
     {
         // Validate input
         if (string.IsNullOrEmpty(command.CardNumber) || string.IsNullOrEmpty(command.Cvv) || string.IsNullOrEmpty(command.CardHolder))
@@ -28,7 +28,7 @@ public class PaymentMethodCommandService : IPaymentMethodCommandService
             throw new ArgumentException("A payment method must be associated with either a caregiver or a tutor.");
 
         // Create new UserPaymentMethod
-        var paymentMethod = new UserPaymentMethod(
+        var paymentMethod = new Domain.Model.Aggregates.TutorPaymentMethod(
             command.CardNumber,
             command.ExpirationDate.ToString(),
             command.Cvv,
@@ -44,7 +44,7 @@ public class PaymentMethodCommandService : IPaymentMethodCommandService
         return paymentMethod;
     }
     
-    public async Task<UserPaymentMethod?> Handle(UpdateUserPaymentCommand command)
+    public async Task<Domain.Model.Aggregates.TutorPaymentMethod?> Handle(UpdateUserPaymentCommand command)
     {
         // Find existing payment method
         var paymentMethod = await _paymentMethodRepository.FindPaymentMethodByIdAsync(command.Id);

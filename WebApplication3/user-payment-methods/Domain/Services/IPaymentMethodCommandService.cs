@@ -6,7 +6,7 @@ namespace WebApplication3.user_payment_methods.Domain.Services;
 
 public interface IPaymentMethodCommandService
 {
-    Task<UserPaymentMethod?> Handle(CreateUserPaymentCommand command);
+    Task<Model.Aggregates.TutorPaymentMethod?> Handle(CreateUserPaymentCommand command);
     
-    Task<UserPaymentMethod?> Handle(UpdateUserPaymentCommand command);
+    Task<Model.Aggregates.TutorPaymentMethod?> Handle(UpdateUserPaymentCommand command);
 }

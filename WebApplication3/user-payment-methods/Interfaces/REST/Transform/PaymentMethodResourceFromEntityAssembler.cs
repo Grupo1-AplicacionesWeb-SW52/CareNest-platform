@@ -5,7 +5,7 @@ namespace WebApplication3.user_payment_methods.Interfaces.REST.Transform;
 
 public static class PaymentMethodResourceFromEntityAssembler
 {
-    public static PaymentMethodResource ToResourceFromEntity(UserPaymentMethod entity)
+    public static PaymentMethodResource ToResourceFromEntity(Domain.Model.Aggregates.TutorPaymentMethod entity)
     {
         return new PaymentMethodResource(
             entity.Id,

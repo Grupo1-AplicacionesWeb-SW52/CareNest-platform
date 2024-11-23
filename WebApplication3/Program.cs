@@ -12,15 +12,16 @@ using WebApplication3.Services.Application.QueryServices;
 using WebApplication3.Services.Domain.Repositories;
 using WebApplication3.Services.Infrastructure.Persistence.EFC.Repositories;
 using WebApplication3.Shared.Interfaces.ASP.Configuration;
+using WebApplication3.TutorPaymentMethod.Application.Internal.CommandServices;
+using WebApplication3.TutorPaymentMethod.Application.Internal.QueryServices;
+using WebApplication3.TutorPaymentMethod.Domain.Repositories;
+using WebApplication3.TutorPaymentMethod.Domain.Services;
+using WebApplication3.TutorPaymentMethod.Infrastructure.Persistence.EFC.Repositories;
 using WebApplication3.Tutors.Application.Internal.CommandServices;
 using WebApplication3.Tutors.Application.Internal.QueryServices;
 using WebApplication3.Tutors.Domain.Repositories;
 using WebApplication3.Tutors.Infrastructure.Persistence.EFC.Repositories;
-using WebApplication3.user_payment_methods.Application.Internal.CommandServices;
-using WebApplication3.user_payment_methods.Application.Internal.QueryServices;
-using WebApplication3.user_payment_methods.Domain.Repositories;
-using WebApplication3.user_payment_methods.Domain.Services;
-using WebApplication3.user_payment_methods.Infrastructure.Persistence.EFC.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -116,13 +117,13 @@ builder.Services.AddScoped<ScheduleCommandService>();
 builder.Services.AddScoped<IWorkaroundRepository, WorkaroundRepository>();
 builder.Services.AddScoped<WorkaroundCommandService>();
 
-// Register Payment Methods Repositories and Services
-builder.Services.AddScoped<IPaymentMethodRepository, PaymentMethodRepository>();
-builder.Services.AddScoped<PaymentMethodQueryService>();
-builder.Services.AddScoped<PaymentMethodCommandService>();
-builder.Services.AddScoped<IPaymentMethodCommandService, PaymentMethodCommandService>();
-builder.Services.AddScoped<IPaymentMethodQueryService, PaymentMethodQueryService>();
 
+// Register Tutor Payment Methods Repositories and Services
+builder.Services.AddScoped<ITutorPaymentMethodRepository, TutorPaymentMethodRepository>();
+builder.Services.AddScoped<TutorPaymentMethodQueryService>();
+builder.Services.AddScoped<TutorPaymentMethodCommandService>();
+builder.Services.AddScoped<ITutorPaymentMethodCommandService, TutorPaymentMethodCommandService>();
+builder.Services.AddScoped<ITutorPaymentMethodQueryService, TutorPaymentMethodQueryService>();
 
 
 builder.Services.AddControllers();

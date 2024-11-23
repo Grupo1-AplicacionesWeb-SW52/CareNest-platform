@@ -1,6 +1,6 @@
 namespace WebApplication3.user_payment_methods.Domain.Model.Aggregates;
 
-public class UserPaymentMethod
+public class TutorPaymentMethod
 {
     public int Id { get; set; }
     public int ? CaregiverId { get; set; }
@@ -10,9 +10,9 @@ public class UserPaymentMethod
     public string Cvv { get; set; }
     public string CardHolder { get; set; }
     
-    private UserPaymentMethod(){}
+    private TutorPaymentMethod(){}
 
-    public UserPaymentMethod(
+    public TutorPaymentMethod(
         string cardNumber,
         string expirationDate,
         string cvv,

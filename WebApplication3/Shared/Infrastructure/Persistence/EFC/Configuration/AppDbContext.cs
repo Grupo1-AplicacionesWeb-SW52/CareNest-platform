@@ -115,21 +115,20 @@ namespace WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration
                 entity.Property(e => e.District).IsRequired().HasMaxLength(50);
             });
             
-            // Configuración para UserPaymentMethod
-            builder.Entity<UserPaymentMethod>(entity =>
-            {
-                entity.ToTable("user_payment_methods");
-                entity.HasKey(upm => upm.Id);
-
-                entity.Property(upm => upm.CardNumber).IsRequired().HasMaxLength(16);
-                entity.Property(upm => upm.Cvv).IsRequired().HasMaxLength(3);
-                entity.Property(upm => upm.CardHolder).IsRequired().HasMaxLength(100);
-                entity.Property(upm => upm.ExpirationDate).IsRequired();
-
-                entity.HasOne<Caregiver>().WithMany().HasForeignKey(upm => upm.CaregiverId).OnDelete(DeleteBehavior.Restrict);
-                entity.HasOne<Tutor>().WithMany().HasForeignKey(upm => upm.TutorId).OnDelete(DeleteBehavior.Restrict);
-            });
             
+            // Configuración para TutorPaymentMethod
+            builder.Entity<TutorPaymentMethod.Domain.Model.Aggregates.TutorPaymentMethod>(entity =>
+            {
+                entity.ToTable("tutor_payment_methods");
+                entity.HasKey(tpm => tpm.Id);
+
+                entity.Property(tpm => tpm.CardNumber).IsRequired().HasMaxLength(16);
+                entity.Property(tpm => tpm.Cvv).IsRequired().HasMaxLength(3);
+                entity.Property(tpm => tpm.CardHolder).IsRequired().HasMaxLength(100);
+                entity.Property(tpm => tpm.ExpirationDate).IsRequired();
+
+                entity.HasOne<Tutor>().WithMany().HasForeignKey(tpm => tpm.TutorId).OnDelete(DeleteBehavior.Restrict);
+            });
         }
     }
 }

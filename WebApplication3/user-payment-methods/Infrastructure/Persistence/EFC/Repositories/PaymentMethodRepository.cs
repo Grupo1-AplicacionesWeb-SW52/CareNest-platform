@@ -7,12 +7,12 @@ using WebApplication3.user_payment_methods.Domain.Repositories;
 namespace WebApplication3.user_payment_methods.Infrastructure.Persistence.EFC.Repositories;
 
 public class PaymentMethodRepository(AppDbContext context) :
-    BaseRepository<UserPaymentMethod>(context), IPaymentMethodRepository
+    BaseRepository<Domain.Model.Aggregates.TutorPaymentMethod>(context), IPaymentMethodRepository
 {
 
-    public async Task<UserPaymentMethod?> FindPaymentMethodByIdAsync(int id)
+    public async Task<Domain.Model.Aggregates.TutorPaymentMethod?> FindPaymentMethodByIdAsync(int id)
     {
-        return Context.Set<UserPaymentMethod>().FirstOrDefault(p => p.Id == id);
+        return Context.Set<Domain.Model.Aggregates.TutorPaymentMethod>().FirstOrDefault(p => p.Id == id);
     }
 
 }
