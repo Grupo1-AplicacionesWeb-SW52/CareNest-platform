@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="CaregiverPaymentMethod\" />
       <Folder Include="Chats\Application\CommandServices\" />
       <Folder Include="Chats\Application\QueryServices\" />
       <Folder Include="Chats\Domain\Model\Aggregates\" />

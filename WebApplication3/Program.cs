@@ -1,5 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using WebApplication3.CaregiverPaymentMethod.Application.Internal.CommandServices;
+using WebApplication3.CaregiverPaymentMethod.Application.Internal.QueryServices;
+using WebApplication3.CaregiverPaymentMethod.Domain.Repositories;
+using WebApplication3.CaregiverPaymentMethod.Domain.Services;
+using WebApplication3.CaregiverPaymentMethod.Infrastructure.Persistence.EFC.Repositories;
 using WebApplication3.Shared.Domain.Repositories;
 using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration;
 using WebApplication3.Shared.Infrastructure.Persistence.EFC.Repositories;
@@ -125,6 +130,13 @@ builder.Services.AddScoped<TutorPaymentMethodCommandService>();
 builder.Services.AddScoped<ITutorPaymentMethodCommandService, TutorPaymentMethodCommandService>();
 builder.Services.AddScoped<ITutorPaymentMethodQueryService, TutorPaymentMethodQueryService>();
 
+
+// Register Caregiver Repositories and Services
+builder.Services.AddScoped<ICaregiverPaymentMethodRepository, CaregiverPaymentMethodRepository>();
+builder.Services.AddScoped<CaregiverPaymentMethodQueryService>();
+builder.Services.AddScoped<CaregiverPaymentMethodCommandService>();
+builder.Services.AddScoped<ICaregiverPaymentMethodCommandService, CaregiverPaymentMethodCommandService>();
+builder.Services.AddScoped<ICaregiverPaymentMethodQueryService, CaregiverPaymentMethodQueryService>();
 
 builder.Services.AddControllers();
 

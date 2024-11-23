@@ -4,7 +4,6 @@ using WebApplication3.Caregivers.Domain.Model.Aggregates;
 using WebApplication3.Services.Domain.Model.Aggregates;
 using WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using WebApplication3.Tutors.Domain.Model.Aggregates;
-using WebApplication3.user_payment_methods.Domain.Model.Aggregates;
 
 namespace WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration
 {
@@ -128,6 +127,20 @@ namespace WebApplication3.Shared.Infrastructure.Persistence.EFC.Configuration
                 entity.Property(tpm => tpm.ExpirationDate).IsRequired();
 
                 entity.HasOne<Tutor>().WithMany().HasForeignKey(tpm => tpm.TutorId).OnDelete(DeleteBehavior.Restrict);
+            });
+            
+            // Configuración para CaregiverPaymentMethod
+            builder.Entity<CaregiverPaymentMethod.Domain.Model.Aggregates.CaregiverPaymentMethod>(entity =>
+            {
+                entity.ToTable("caregiver_payment_methods");
+                entity.HasKey(tpm => tpm.Id);
+
+                entity.Property(tpm => tpm.CardNumber).IsRequired().HasMaxLength(16);
+                entity.Property(tpm => tpm.Cvv).IsRequired().HasMaxLength(3);
+                entity.Property(tpm => tpm.CardHolder).IsRequired().HasMaxLength(100);
+                entity.Property(tpm => tpm.ExpirationDate).IsRequired();
+
+                entity.HasOne<Caregiver>().WithMany().HasForeignKey(tpm => tpm.CaregiverId).OnDelete(DeleteBehavior.Restrict);
             });
         }
     }
