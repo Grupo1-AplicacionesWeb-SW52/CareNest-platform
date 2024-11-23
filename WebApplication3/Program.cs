@@ -11,6 +11,10 @@ using WebApplication3.Services.Application.CommandServices;
 using WebApplication3.Services.Application.QueryServices;
 using WebApplication3.Services.Domain.Repositories;
 using WebApplication3.Services.Infrastructure.Persistence.EFC.Repositories;
+using WebApplication3.Payments.Domain.Repositories;
+using WebApplication3.Payments.Infrastructure.Persistence.EFC.Repositories;
+using WebApplication3.Payments.Application.Internal.CommandServices;
+using WebApplication3.Payments.Application.Internal.QueryServices;
 using WebApplication3.Shared.Interfaces.ASP.Configuration;
 using WebApplication3.Tutors.Application.Internal.CommandServices;
 using WebApplication3.Tutors.Application.Internal.QueryServices;
@@ -97,13 +101,12 @@ builder.Services.AddScoped<CaregiverCommandService>();
 builder.Services.AddScoped<CaregiverQueryService>();
 
 builder.Services.AddScoped<ITutorRepository, TutorRepository>();
-builder.Services.AddScoped<TutorQueryService>();  // Asegúrate de registrar el servicio aquí
+builder.Services.AddScoped<TutorQueryService>();
 builder.Services.AddScoped<TutorCommandService>();
 
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 builder.Services.AddScoped<ServiceQueryService>();
 builder.Services.AddScoped<ServiceCommandService>();
-
 
 builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
 builder.Services.AddScoped<ScheduleQueryService>();
@@ -112,8 +115,11 @@ builder.Services.AddScoped<ScheduleCommandService>();
 builder.Services.AddScoped<IWorkaroundRepository, WorkaroundRepository>();
 builder.Services.AddScoped<WorkaroundCommandService>();
 
+// **Agregado para Payment**
+builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();  // Repositorio de Payment
 
-
+builder.Services.AddScoped<PaymentCommandService>();  // Agregado servicio de comandos de Payment
+builder.Services.AddScoped<PaymentQueryService>();    // Agregado servicio de consulta de Payment
 
 builder.Services.AddControllers();
 
